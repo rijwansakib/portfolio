@@ -1,17 +1,18 @@
 import React from 'react';
 import { Container, Nav, Navbar } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 const Home = () => {
     return (
-        <div>
+        <div className='fixed-top'>
             <Navbar bg="dark" variant="dark">
                 <Container>
-                <Navbar.Brand href="#home">RS</Navbar.Brand>
+                <Navbar.Brand><Nav.Link >RS</Nav.Link></Navbar.Brand>
                 <Nav className="">
-                <Nav.Link href="#Projects">Projects</Nav.Link>
-                <Nav.Link href="#Resources">Resources</Nav.Link>
-                <Nav.Link href="#About">About</Nav.Link>
-                <Nav.Link href="#Contact">Contact</Nav.Link>
+                <Nav.Link href='/featured-project' >Projects</Nav.Link>
+                <Nav.Link >Resources</Nav.Link>
+                <Nav.Link >About</Nav.Link>
+                <Nav.Link >Contact</Nav.Link>
                 </Nav>
                 </Container>
             </Navbar>
