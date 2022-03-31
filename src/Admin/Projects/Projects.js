@@ -2,11 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import { Form, Row } from 'react-bootstrap';
 
 const Projects = () => {
-        const [project,setProject]=useState([]);
-        const [recent,setRecent]=useState([]);
-         console.log(project)
-         console.log(recent)
-    
+        const [project,setProject]=useState([]);    
         //use ref
          const nameRef= useRef('');
          const imgUrlRef=useRef('');
@@ -63,34 +59,34 @@ const Projects = () => {
         return (
             <div className='w-75 mx-auto'>
                 <form onSubmit={handelPrpjrct}>
-                <h1>FeaturedProject:{project.length}</h1>
+                <h1 className='text-success'>FEATURED PROJECT :: {project.length}</h1>
     
                     <Row>
                         <Form.Group>
-                            <Form.Label>Name</Form.Label>
+                            <Form.Label className='text-muted'>Name</Form.Label>
                             <Form.Control ref={nameRef} type="text" placeholder="Name" />
                         </Form.Group>
                         <Form.Group>
-                            <Form.Label>Image URL</Form.Label>
+                            <Form.Label className='text-muted'>Image URL</Form.Label>
                             <Form.Control ref={imgUrlRef} type="text" placeholder="Image URL" />
                         </Form.Group>
                         <Form.Group>
-                            <Form.Label>Title</Form.Label>
+                            <Form.Label className='text-muted'>Title</Form.Label>
                             <Form.Control ref={titleRef} type="text" placeholder="Title" />
                         </Form.Group>
                         <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-                            <Form.Label>Example textarea</Form.Label>
+                            <Form.Label className='text-muted'>Example textarea</Form.Label>
                             <Form.Control ref={textRef} as="textarea" rows={3} />
                         </Form.Group>
                         <Form.Group>
-                            <Form.Label>Live site link</Form.Label>
+                            <Form.Label className='text-muted'>Live site link</Form.Label>
                             <Form.Control  ref={liveUrlRef}type="text" placeholder="Live site link" />
                         </Form.Group>
                         <Form.Group>
-                            <Form.Label>Git link</Form.Label>
+                            <Form.Label className='text-muted'>Git link</Form.Label>
                             <Form.Control ref={gitUrlRef}  type="text" placeholder="Git link" />
                         </Form.Group>
-                        <input className='w-25 mx-auto' type="submit" value="Submit"/> 
+                        <input className='w-25 mx-auto my-5 ' type="submit" value="Submit"/> 
                     </Row>
                 </form>
             </div>

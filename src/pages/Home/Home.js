@@ -1,7 +1,5 @@
 import React from 'react';
 import { Container, Nav, Navbar } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
-
 const Home = () => {
     return (
         <div className='fixed-top'>
@@ -12,7 +10,7 @@ const Home = () => {
                 <Nav.Link href='/featured-project' >Projects</Nav.Link>
                 <Nav.Link >Resources</Nav.Link>
                 <Nav.Link >About</Nav.Link>
-                <Nav.Link >Contact</Nav.Link>
+                <Nav.Link to="/contact" >Contact</Nav.Link>
                 </Nav>
                 </Container>
             </Navbar>

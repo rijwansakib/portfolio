@@ -29,19 +29,27 @@ function App() {
         </Route>
         <Route path='/contact' element={<Contact></Contact>}>
         </Route>
-        <Route path='/project' element={<Projects></Projects>}>
-        </Route>
-        <Route path='/recent' element={<RecentWorkDashborad></RecentWorkDashborad>}>
-        </Route>
-        <Route path='/project-manage' element={<ProjectManage></ProjectManage>}>
-        </Route>
 
 
 
         <Route path='/admin' element={<Admin></Admin>}>
         </Route>
-        <Route path='/dashboard' element={<DashBoard></DashBoard>}>
-        </Route>
+
+
+                  <Route path='/dashboard' element={<DashBoard></DashBoard>}>
+                 
+                  <Route path='project' element={<Projects></Projects>}>
+                  </Route> 
+                  <Route path='recent' element={<RecentWorkDashborad></RecentWorkDashborad>}>
+                  </Route>
+                  <Route path='project-manage' element={<ProjectManage></ProjectManage>}>
+                  </Route>
+
+                  </Route> 
+              
+
+
+
       </Routes>
     </div>
   );

@@ -4,3 +4,31 @@
     display: grid;
     grid-template-columns: repeat(3,1fr);
 }
+@media only screen and (max-width: 900px){
+    /*Big smartphones [600px -> 900px]*/
+    .project{
+        width: 80%;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+@media only screen and (max-width: 600px){
+    /*Big smartphones [500px -> 600px]*/
+    .project{
+        width: 80%;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+    .git{
+        margin-left: 5px;
+    }
+}
+@media only screen and (max-width: 530px){
+	.project{
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+    }
+}

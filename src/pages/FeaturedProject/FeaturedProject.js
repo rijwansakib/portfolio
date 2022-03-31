@@ -6,7 +6,7 @@ const FeaturedProject = () => {
     const[projects,setProjects]=useState([])
     console.log(projects);
     useEffect(()=>{
-        fetch('http://localhost:5000/projects')
+        fetch('http://localhost:5000/Projects')
         .then(res=>res.json())
         .then(data=>setProjects(data))
     },[])
@@ -19,9 +19,7 @@ const FeaturedProject = () => {
 
 
                                 <div className='project mt-5'>
-
-                                
-
+                    
                             {
                                 
                              projects.map(project=>
@@ -33,8 +31,8 @@ const FeaturedProject = () => {
                                                     <div className="card-body">
                                                     <h5 className="card-title">{project.title}</h5>
                                                     <p className="card-text">{project.text}</p>
-                                                    <Button className='mx-2' href={project.live} variant='primary'>LIVE</Button>
-                                                    <Button className='mx-2' href={project.gitLive} variant='primary'> gitHub</Button>
+                                                    <Button className='mx-2 ' href={project.live} variant='primary'>LIVE</Button>
+                                                    <Button className='mx-2 git' href={project.gitLive} variant='primary'> gitHub</Button>
                                                 </div>
                                             </div>
                                             </div>

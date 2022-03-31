@@ -16,7 +16,7 @@ const Contact = () => {
                 <h1>Contact</h1>
                 </div>
                 <div className="rectnt-work mb-5 mx-4"> 
-                <a href="mailto:rijwansakib1@gmail.com.com"><button type="button" className="glow-on-hover btn btn-danger px-5 py-2 mx-4" >{mail} Mail</button></a>
+                <a href="mailto:rijwansakib1@gmail.com"><button type="button" className="glow-on-hover btn btn-danger px-5 py-2 mx-4" >{mail} Mail</button></a>
                 <a href="https://github.com/rijwansakib"><button type="button" className="glow-on-hover btn btn-danger px-5 py-2 mx-4" >{github}Github</button></a>
                 <a href="https://www.linkedin.com/in/rijwan-sakib-88993a182/"><button type="button" className="glow-on-hover btn btn-danger px-5 py-2 mx-4" >{linkedin}Linkedin</button></a>
                 <a href="https://msng.link/o/?RizwanAhmedSakib=fm"><button type="button" className="glow-on-hover btn btn-danger px-5 py-2 mx-4" >{messenger}Messenger</button></a>

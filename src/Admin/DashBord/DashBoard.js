@@ -1,23 +1,26 @@
-import React from 'react';
-import { Nav } from 'react-bootstrap';
 import'./Dashboard.css'
+import { Link, Outlet } from 'react-router-dom';
 
 const DashBoard = () => {
     return (
-        <div>
-
+        <div className='dashboard mb-5'>
             
-            {/* sidebar */}
-
-            <div className="side-bar">
+            <div className="side-bar d-flex ">
                     <div className='header' >
-                        <h1>DashBoard</h1>  
+                        <h1 className='mt-3'>DashBoard</h1>  
+                        <nav className=' mt-5' >
+                            <div className='porject-header  d-flex flex-column'>
+                                <Link className='link text-decoration-none '  to="project-manage" >Project Manage</Link> 
+                                <Link className='link text-decoration-none '  to="project" >Add Projects</Link> 
+                                <Link className='link text-decoration-none '  to="recent" >Add Recent work</Link>
+                            </div>
+                        </nav>
                     </div>
-                    <Nav.Link className='link' href='/project-manage' >Project Manage</Nav.Link> 
-                    <Nav.Link className='link' href='/project' >Add Projects</Nav.Link> 
-                    <Nav.Link className='link' href='/recent' >Add Recent work</Nav.Link> 
-            </div>
 
+
+                       <Outlet />
+                
+                    </div> 
         </div>
 
     );

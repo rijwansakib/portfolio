@@ -1,11 +1,10 @@
-
+.dashboard{
+    background-color: #18113c;  
+}
 .side-bar{
-    width: 20%;
     font-size: 20px;
     font-family: sans-serif;
     font-weight: 900;
-    background-color: #18113c;
-    height: 100vh;
 }
 .link{
     color: #E5D0BC;
@@ -13,6 +12,7 @@
 .header{
     background-color: rgb(192, 156, 156);
     color: rgb(37, 20, 20);
+    height: 100vh;
 }
 .header h1{
     font-size: 40px;

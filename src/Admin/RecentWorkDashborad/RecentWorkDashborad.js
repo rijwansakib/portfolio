@@ -58,27 +58,27 @@ const RecentWorkDashborad = () =>{
         <div className='w-75 mx-auto'>
 
             <form onSubmit={handeRecentWork}>
-            <h1>Recent Work:{recent.length}</h1>
+            <h1 className='text-muted'>Recent Work :: {recent.length}</h1>
 
                 <Row>
                     <Form.Group>
-                        <Form.Label>Name</Form.Label>
+                        <Form.Label className='text-muted'>Name</Form.Label>
                         <Form.Control ref={nameRef} type="text" placeholder="Name" />
                     </Form.Group>
 
                     <Form.Group>
-                        <Form.Label>Title</Form.Label>
+                        <Form.Label className='text-muted'>Title</Form.Label>
                         <Form.Control ref={titleRef} type="text" placeholder="Title" />
                     </Form.Group>
                     <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-                        <Form.Label>Example textarea</Form.Label>
+                        <Form.Label className='text-muted'>Example textarea</Form.Label>
                         <Form.Control ref={textRef} as="textarea" rows={3} />
                     </Form.Group>
                     <Form.Group>
-                        <Form.Label>Git link</Form.Label>
+                        <Form.Label className='text-muted'>Git link</Form.Label>
                         <Form.Control ref={gitUrlRef}  type="text" placeholder="Git link" />
                     </Form.Group>
-                    <input className='w-25 mx-auto' type="submit" value="Submit"/> 
+                    <input className='w-25 mx-auto my-5' type="submit" value="Submit"/> 
                 </Row>
             </form>
         </div>
