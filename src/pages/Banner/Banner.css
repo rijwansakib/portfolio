@@ -3,7 +3,10 @@
     margin: 0 auto;
     display: flex;
 }
-
+.info-header{
+    margin-top: 20%;
+}
 img{
-    width: 50%;
+    width: 80%;
+    margin-top: 20%;
 }

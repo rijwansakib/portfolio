@@ -12,6 +12,7 @@ import HomePage from './pages/HomePage/HomePage';
 import Projects from './Admin/Projects/Projects';
 import RecentWorkDashborad from './Admin/RecentWorkDashborad/RecentWorkDashborad';
 import ProjectManage from './Admin/ProjectManage/ProjectManage';
+import BannerImage from './Admin/BannerImage/BannerImage';
 
 function App() {
   return (
@@ -43,6 +44,8 @@ function App() {
                   <Route path='recent' element={<RecentWorkDashborad></RecentWorkDashborad>}>
                   </Route>
                   <Route path='project-manage' element={<ProjectManage></ProjectManage>}>
+                  </Route>
+                  <Route path='banner' element={<BannerImage></BannerImage>}>
                   </Route>
 
                   </Route> 

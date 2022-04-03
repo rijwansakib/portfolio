@@ -13,6 +13,7 @@ const DashBoard = () => {
                                 <Link className='link text-decoration-none '  to="project-manage" >Project Manage</Link> 
                                 <Link className='link text-decoration-none '  to="project" >Add Projects</Link> 
                                 <Link className='link text-decoration-none '  to="recent" >Add Recent work</Link>
+                                <Link className='link text-decoration-none '  to="banner" >Add Banner Image</Link>
                             </div>
                         </nav>
                     </div>
