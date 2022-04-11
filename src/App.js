@@ -1,5 +1,4 @@
 import './App.css';
-import Home from './pages/Home/Home';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Banner from './pages/Banner/Banner';
 import RecentWork from './pages/RecentWork/RecentWork';
@@ -13,6 +12,9 @@ import Projects from './Admin/Projects/Projects';
 import RecentWorkDashborad from './Admin/RecentWorkDashborad/RecentWorkDashborad';
 import ProjectManage from './Admin/ProjectManage/ProjectManage';
 import BannerImage from './Admin/BannerImage/BannerImage';
+import About from './pages/About/About';
+import Resume from './pages/Resume/Resume';
+import ResumePdf from './Admin/ResumePdf/ResumePdf';
 
 function App() {
   return (
@@ -20,13 +22,15 @@ function App() {
       <Routes>
         <Route path='/' element={<HomePage></HomePage>}>
         </Route>
-        <Route path='/home' element={<Home></Home>}>
+        <Route path='/home' element={<HomePage></HomePage>}>
         </Route>
         <Route path='/banner' element={<Banner></Banner>}>
         </Route>
-        <Route path='/recent-work' element={<RecentWork></RecentWork>}>
-        </Route>
         <Route path='/featured-project' element={<FeaturedProject></FeaturedProject>}>
+        </Route>
+        <Route path='/resume' element={<Resume></Resume>}>
+        </Route>
+        <Route path='/about' element={<About></About>}>
         </Route>
         <Route path='/contact' element={<Contact></Contact>}>
         </Route>
@@ -41,11 +45,11 @@ function App() {
                  
                   <Route path='project' element={<Projects></Projects>}>
                   </Route> 
-                  <Route path='recent' element={<RecentWorkDashborad></RecentWorkDashborad>}>
-                  </Route>
                   <Route path='project-manage' element={<ProjectManage></ProjectManage>}>
                   </Route>
                   <Route path='banner' element={<BannerImage></BannerImage>}>
+                  </Route>
+                  <Route path='resume-pdf' element={<ResumePdf></ResumePdf>}>
                   </Route>
 
                   </Route> 

@@ -1,0 +1,96 @@
+.about{
+    width: 80%;
+    margin: 70px auto;
+    
+}
+.heading{
+    width:90%;
+    margin: 100px auto;
+}
+.heading p{
+    font-size: 20px;
+    color: #594a4e;
+}
+.skills h1{
+    color: #33272a;
+}
+.skill{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 5px;
+}
+.details{
+    border: 1px solid rgb(84, 82, 79);
+    border-radius: 7px;
+    height: 80px;
+}
+
+.Language{
+    position: relative;
+    background-color: #c3f0ca;
+}
+.icon{
+    position: absolute;
+    margin-left: 100px;
+    margin-top: 10px;
+    font-size: 35px;
+}
+.Frameworks{
+    position: relative;
+    background-color:#c592ce ;
+}
+
+.Databases{
+    position: relative;
+    background-color: #a06d7f;
+}
+
+.Dev{
+    position: relative;
+    background-color: #eebbc3 ;
+}
+.Design{
+    position: relative;
+    background-color:  #ff8e3c;
+}
+.Markup{
+    position: relative;
+    background-color: #a786df ;
+}
+
+@media only screen and (max-width: 1600px){
+    .icon{
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 600px){
+    .heading{
+        width:100%;
+        
+        padding: 0px;
+    }
+	.skill{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        gap: 5px;
+    }
+    .icon{
+        display: none;
+    }
+}
+@media only screen and (max-width: 425px){
+    .heading{
+        width:100%;
+        
+        padding: 0px;
+    }
+	.skill{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        gap: 5px;
+    }
+    .icon{
+        display: none;
+    }
+}

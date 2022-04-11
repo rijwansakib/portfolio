@@ -7,6 +7,12 @@
     margin-top: 20%;
 }
 img{
-    width: 80%;
-    margin-top: 20%;
+    width: 50%;
+    margin-top: 10%;
+}
+
+.contact-btn{
+    border: 1px solid black;
+    border-radius: 7px;
+    background-color: antiquewhite;
 }

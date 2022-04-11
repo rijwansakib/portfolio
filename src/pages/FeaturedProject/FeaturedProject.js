@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Button} from 'react-bootstrap';
 import '../FeaturedProject/FeaturedProject.css'
+import Home from '../Home/Home';
 
 const FeaturedProject = () => {
     const[projects,setProjects]=useState([])
@@ -12,6 +13,7 @@ const FeaturedProject = () => {
     },[])
     return (
         <div className='mb-3'>
+            <Home></Home>
                
                                 <div className="info mx-auto">
                                     <h1>Featured Project</h1>

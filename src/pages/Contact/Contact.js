@@ -12,7 +12,7 @@ const Contact = () => {
     const messenger= <FontAwesomeIcon icon={faFacebookMessenger} />
     return (
         <div>
-            <div className="info mx-5 d-flex justify-content-center mt-5">
+            <div className="info mx-5 d-flex justify-content-center mt-5" id='contact'>
                 <h1>Contact</h1>
                 </div>
                 <div className="rectnt-work mb-5 mx-4"> 

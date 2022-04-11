@@ -10,6 +10,7 @@ const RecentWork = () => {
          .then(data=>setWorks(data))
     },[])
     return (
+        
         <div className='d-flex justify-content-center mt-5'>
             <div className="info mx-5">
                 <h1>RECENT WORKS</h1>

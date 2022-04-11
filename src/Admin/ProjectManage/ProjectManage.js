@@ -2,8 +2,10 @@ import React, { useEffect, useState } from 'react';
 
 const ProjectManage = () => {
     const[featuredProject,setFeaturedProjects]=useState([])
-    const[recentProject,setRecentProject]=useState([])
     const[bannerImage,setBannerImage]=useState([])
+
+    // resume pdf upload
+    
 
     //get data from api
 
@@ -11,11 +13,6 @@ const ProjectManage = () => {
         fetch('http://localhost:5000/projects')
         .then(res=>res.json())
         .then(data=>setFeaturedProjects(data))
-    },[])
-    useEffect(()=>{
-        fetch('http://localhost:5000/recent')
-        .then(res=>res.json())
-        .then(data=>setRecentProject(data))
     },[])
     useEffect(()=>{
         fetch('http://localhost:5000/banner')
@@ -45,25 +42,7 @@ const ProjectManage = () => {
        }
     }
    
-    //delete recent project
-    const deleteRecentProject= id =>{
-        const proceed=window.confirm('Are You Sure, You Want To Delete?');
-        if(proceed){
-            fetch(`http://localhost:5000/recent/${id}`,{
 
-                method:'DELETE'
-            })
-            .then(res=>res.json())
-            .then(data=>{
-                if(data.deletedCount>0){
-                    alert('deleted successfully');
-                    const remainingRecedntProject=recentProject.filter(recent=>recent._id!==id);
-                    setRecentProject(remainingRecedntProject)
-
-                }
-            })
-        }
-    }
  
     //Delete banner image }
 
@@ -78,8 +57,8 @@ const ProjectManage = () => {
             .then(data=>{
                 if(data.deletedCount>0){
                     alert('deleted successfully');
-                    const remainingRecedntProject=recentProject.filter(recent=>recent._id!==id);
-                    setBannerImage(remainingRecedntProject)
+                    const remainingbannerImaget=bannerImage.filter(recent=>recent._id!==id);
+                    setBannerImage(remainingbannerImaget)
 
                 }
             })
@@ -118,38 +97,6 @@ const ProjectManage = () => {
                 ))
             }
 
-            {/* recent work */}
-            <h1 className='text-muted'>Recent work</h1>
-            <p>-------------------------</p>
-                    <table className="table  border">
-                    <thead>
-                        <tr className='d-flex justify-content-around'>
-                        <div><th scope="col" className='text-muted'># PROJECT ID</th></div>
-                        <div><th scope="col" className='text-muted'>Project Name</th></div>
-                        <div><th scope="col" className='text-muted'>Delete PROJECT</th></div>
-                        </tr>
-                    </thead>
-    
-                    </table>
-            {
-                recentProject.map(recentProject=>(
-                    
-                <table className='table border'>
-                    <tbody >
-                        <tr className='d-flex justify-content-around'>
-                        <div><th scope="row" className='text-muted'>{recentProject._id}</th></div>
-                        <div><td className='fs-5 fw-bold text-muted'>{recentProject.name}</td></div>
-                        <div><td><button type="button" className="btn btn-danger"
-                        onClick={()=>deleteRecentProject(recentProject._id) }>Delete</button></td></div>
-                        </tr>
-                </tbody>
-
-                </table>
-
-                ))
-            }
-
-
             <h1 className='text-muted'>Banner Image</h1>
             <p>-------------------------</p>
                     <table className="table  border">
@@ -178,6 +125,8 @@ const ProjectManage = () => {
 
                 ))
             }
+
+
         </div>
     );
 };

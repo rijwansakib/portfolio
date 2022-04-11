@@ -15,6 +15,9 @@ const Banner = () => {
                 <h3>I’m Rijwan Ahmed Sakib</h3>
                 <h1>Software Engineer and Full Stack Developer.</h1>
                 <h5>I build web and mobile applications with modern technologies, commit my code on Github, and write on my Blog.</h5>
+                <div class="contact">
+                       <a href="#contact" class="btn btn-primary btn-animate">Contact</a>
+                 </div>
             </div>
 
             <div className="image">
